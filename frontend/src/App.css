@@ -1,0 +1,40 @@
+h1 {
+    flex: 1;
+    font-size: 120%;
+    padding-left: 1em;
+}
+
+.App {
+
+}
+
+.App-header {
+    display: flex;
+}
+
+.App-editor {
+  flex: 1;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+.App-sidebar {
+    padding: 10px;
+}
+
+.App-sidebar button {
+    margin: 0 5px 0 0;
+}
+
+.worklet {
+    margin: 10px 0 10px;
+}
+
+.worklet input {
+    margin: 0 5px 0 0;
+}
+.error {
+    font-size: 90%;
+    color: #f00;
+    padding: 0 0 10px;
+}
