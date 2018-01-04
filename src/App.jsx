@@ -217,7 +217,7 @@ registerProcessor('${processorName}', Processor);
           </div>
           <div className="App-sidebar">
             { audioWorkletIsAvailable ||
-              <div className="error">AudioWorklet is not available on this browser</div>
+              <div className="error">AudioWorklet is not available on this browser (<a href="https://developers.google.com/web/updates/2017/12/audio-worklet#experimental">how to enable</a>)</div>
             }
             { error &&
               <div className="error">{error}</div>
