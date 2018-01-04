@@ -238,9 +238,8 @@ registerProcessor('${processorName}', Processor);
             }
             { id &&
               <div className="App-usage">
-                <pre>{`// Usage Example
-
-const context = new AudioContext();
+                <p className="title">Usage Example</p>
+                <pre>{`const context = new AudioContext();
 await context
   .audioWorklet
   .addModule('${origin}/w/${id}/module.js');

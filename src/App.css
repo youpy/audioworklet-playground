@@ -27,9 +27,19 @@ h1 {
 }
 
 .App-usage {
-    background: #ffc;
-    padding: 1em;
+    border: 1px solid #f0c36d;
+    border-radius: 2px;
+    background: #f9edbe;
+    padding: 0 1em 1em;
     margin: 10px 10px 10px 0;
+}
+
+.App-usage .title {
+    display: inline-block;
+    margin: 0;
+    padding: 0.3em;
+    background: #f0c36d;
+    font-size: 80%;
 }
 
 .App-usage h4 {
