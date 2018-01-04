@@ -26,6 +26,17 @@ h1 {
     margin: 0 5px 0 0;
 }
 
+.App-usage {
+    background: #ffc;
+    padding: 1em;
+    margin: 10px 10px 10px 0;
+}
+
+.App-usage h4 {
+    padding: 0;
+    margin: 0;
+}
+
 .worklet {
     margin: 10px 0 10px;
 }
