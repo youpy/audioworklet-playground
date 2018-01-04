@@ -192,7 +192,7 @@ registerProcessor('${processorName}', Processor);
       <div>
         <div className="App-header">
           <h1>
-            AudioWorklet Playground
+            <a href="/">AudioWorklet Playground</a>
           </h1>
           <div>
           </div>
