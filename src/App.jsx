@@ -207,6 +207,7 @@ registerProcessor('${processorName}', Processor);
               onChange={this.onChange.bind(this)}
               requireConfig={requireConfig}
               options={{
+                theme: 'vs-dark',
                 autoIndent: true,
                 automaticLayout: true,
                 minimap:{
