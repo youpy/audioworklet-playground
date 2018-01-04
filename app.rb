@@ -13,7 +13,7 @@ helpers do
 end
 
 set :store, Store.new(ENV['REDIS_URL'])
-set :public_folder, 'frontend/build/'
+set :public_folder, 'build/'
 
 get '/' do
   send_file File.join(settings.public_folder, 'index.html')
