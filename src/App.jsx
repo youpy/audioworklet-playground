@@ -216,6 +216,9 @@ registerProcessor('${processorName}', Processor);
             />
           </div>
           <div className="App-sidebar">
+            { audioWorkletIsAvailable ||
+              <div className="error">AudioWorklet is not available on this browser</div>
+            }
             { error &&
               <div className="error">{error}</div>
             }
@@ -248,9 +251,6 @@ const worklet =
   );
 `}</pre>
               </div>
-            }
-            { audioWorkletIsAvailable ||
-              <div className="error">AudioWorklet is not available on this browser</div>
             }
           </div>
         </div>
