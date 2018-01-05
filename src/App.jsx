@@ -214,7 +214,6 @@ if (typeof Processor !== 'undefined') {
               onChange={this.onChange.bind(this)}
               requireConfig={requireConfig}
               options={{
-                wordWrap: 'on',
                 autoIndent: true,
                 automaticLayout: true,
                 minimap:{
