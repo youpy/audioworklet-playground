@@ -42,19 +42,22 @@ get '/w/:id/module.js' do
     headers({ 'Access-Control-Allow-Origin' => '*' })
 
     <<EOM
-const _registerProcessor = registerProcessor;
+let _registerProcessor = registerProcessor;
 let registered = false;
 
 registerProcessor = (name, klass) => {
   if (!registered) {
     registered = true;
     _registerProcessor('#{processor_name}', klass);
+    registerProcessor = _registerProcessor;
   }
 };
 
 #{data['content']}
 
-registerProcessor("#{processor_name}", Processor)
+if (typeof Processor !== 'undefined') {
+  registerProcessor('#{processor_name}', Processor);
+}
 EOM
   else
     status 404
