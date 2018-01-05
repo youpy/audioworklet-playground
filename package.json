@@ -19,6 +19,9 @@
   "proxy": {
     "/api": {
       "target": "http://localhost:9292"
+    },
+    "^/w/.*/module.js": {
+      "target": "http://localhost:9292"
     }
   }
 }
