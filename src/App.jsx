@@ -201,6 +201,7 @@ registerProcessor('${processorName}', Processor);
               onChange={this.onChange.bind(this)}
               requireConfig={requireConfig}
               options={{
+                wordWrap: 'on',
                 autoIndent: true,
                 automaticLayout: true,
                 minimap:{
