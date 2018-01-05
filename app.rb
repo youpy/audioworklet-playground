@@ -37,13 +37,25 @@ get '/w/:id/module.js' do
 
   if item
     data = JSON.parse(item)
+    processor_name = 'processor-%s' % id
     content_type 'application/javascript'
     headers({ 'Access-Control-Allow-Origin' => '*' })
 
-    data['content'] +
-      "\n" +
-      ('registerProcessor("processor-%s", Processor)' % id) +
-      "\n"
+    <<EOM
+const _registerProcessor = registerProcessor;
+let registered = false;
+
+registerProcessor = (name, klass) => {
+  if (!registered) {
+    registered = true;
+    _registerProcessor('#{processor_name}', klass);
+  }
+};
+
+#{data['content']}
+
+registerProcessor("#{processor_name}", Processor)
+EOM
   else
     status 404
     'not found'
