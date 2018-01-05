@@ -98,7 +98,17 @@ class App extends Component {
     source.loop = true;
 
     const processorName = `processor-${Math.random()}`
-    const blob = new Blob([code + `
+    const blob = new Blob([`
+const _registerProcessor = registerProcessor;
+let registered = false;
+
+registerProcessor = (name, klass) => {
+  if (!registered) {
+    registered = true;
+    _registerProcessor('${processorName}', klass);
+  }
+};
+` + code + `
 registerProcessor('${processorName}', Processor);
 `], { type: 'application/javascript' });
     const blobURL = URL.createObjectURL(blob);
