@@ -105,13 +105,7 @@ registerProcessor('${processorName}', Processor);
 
     try {
       await context.audioWorklet.addModule(blobURL);
-    } catch (e) {
-      this.setState({
-        error: e.message
-      });
-    }
 
-    try {
       const worklet =
         // eslint-disable-next-line no-undef
         new AudioWorkletNode(
