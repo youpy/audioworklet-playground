@@ -119,6 +119,7 @@ get '/api/w/:id' do
   if item
     result[:item] = JSON.parse(item)
   else
+    result[:error] = 'not found'
     status 404
   end
 
