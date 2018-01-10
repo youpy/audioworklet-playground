@@ -10,6 +10,8 @@ const getId = () => {
   if (url.pathname.match(/^\/w\/([0-9a-z]+)/)) {
     id = RegExp.$1
   };
+
+  return id;
 };
 
 ReactDOM.render(<App id={getId()} />, document.getElementById('root'));
